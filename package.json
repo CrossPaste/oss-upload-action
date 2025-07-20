@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build -- -w",
-    "build": "ncc build src/index.js -m -o lib"
+    "build": "ncc build src/index.js -m -o lib",
+    "test": "node test.js",
+    "test:shell": "./test.sh"
   },
   "keywords": [],
   "author": "tvrcgo",

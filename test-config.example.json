@@ -1,0 +1,33 @@
+{
+  "description": "OSS上传测试配置示例",
+  "configs": {
+    "development": {
+      "key-id": "YOUR_OSS_ACCESS_KEY_ID",
+      "key-secret": "YOUR_OSS_ACCESS_KEY_SECRET", 
+      "region": "oss-cn-shenzhen",
+      "bucket": "your-test-bucket",
+      "assets": "test-files/**:test/"
+    },
+    "production": {
+      "key-id": "YOUR_PROD_OSS_ACCESS_KEY_ID",
+      "key-secret": "YOUR_PROD_OSS_ACCESS_KEY_SECRET",
+      "endpoint": "https://oss-cn-shenzhen-internal.aliyuncs.com",
+      "bucket": "your-prod-bucket", 
+      "assets": "dist/**:releases/"
+    }
+  },
+  "test_scenarios": [
+    {
+      "name": "单文件上传",
+      "assets": "test-files/test.txt:uploaded-test.txt"
+    },
+    {
+      "name": "目录上传", 
+      "assets": "test-files/**:test-folder/"
+    },
+    {
+      "name": "多个规则",
+      "assets": "test-files/test.txt:single.txt\ntest-files/subdir/**:batch/"
+    }
+  ]
+}

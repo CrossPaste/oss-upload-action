@@ -1,2 +1,7 @@
 node_modules/
 .DS_Store
+test-config.json
+/test-files/subdir/file1.txt
+/test-files/subdir/file2.txt
+/test-files/test.png
+/test-files/test.txt
